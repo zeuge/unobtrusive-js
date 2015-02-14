@@ -1,9 +1,11 @@
 <% if @item.errors.any? -%>
+  $("#flash_notice").hide();
   $("#flash_errors").html("<%= escape_javascript(@item.errors.full_messages.join ', ').html_safe %>");
+  $("#flash_errors").show(500);
 <% else -%>
   $("#flash_errors").hide();
   $("#flash_notice").html("<%= escape_javascript(flash[:notice]) %>");
-  $("#flash_notice").show(300);
+  $("#flash_notice").show(500);
   $(":input[type=text]").val('');
   $("#items").html("<%= escape_javascript(render 'items') %>");
 <% end -%>

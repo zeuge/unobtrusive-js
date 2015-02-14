@@ -10,8 +10,6 @@ class ItemsController < ApplicationController
     if @item.save
       flash[:notice] = "Successfully created item."
       @items = Item.all
-    else
-      flash[:alert] = "Error"
     end
   end
 
