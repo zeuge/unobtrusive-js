@@ -17,4 +17,5 @@ private
   def items_params
     params.require(:item).permit(:name, :description)
   end
+  
 end
