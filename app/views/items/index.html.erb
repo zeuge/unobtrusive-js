@@ -1,6 +1,13 @@
 <h1>Welcome to Unobtrusive JavaScript</h1>
-<div id="flash_notice" class="alert alert-dismissible alert-success"></div>
-<div id="flash_errors" class="alert alert-dismissible alert-danger"></div>
+<div id="flash_notice" class="alert alert-success alert-dismissible" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <p></p>
+</div>
+
+<div id="flash_errors" class="alert alert-danger alert-dismissible"  role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <p></p>
+</div>
 
 <div id="form"><%= render 'form' %></div>
 <%= link_to 'New Item', new_item_path, class: 'btn btn-default', id: "new-button", remote: true %>

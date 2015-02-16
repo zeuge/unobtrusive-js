@@ -1,3 +1,4 @@
 $("#flash_errors").hide(300);
-$("#flash_notice").html("<%= escape_javascript(flash[:notice]) %>").show(300);
+$("#flash_notice p").html("<%= escape_javascript(flash[:notice]) %>");
+$("#flash_notice").show(300);
 $("#items").html("<%= escape_javascript(render 'items') %>");
