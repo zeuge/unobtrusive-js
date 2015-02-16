@@ -1,11 +1,11 @@
 <% if @item.errors.any? -%>
   $("#flash_notice").hide(300);
-  $("#flash_errors").html("<%= escape_javascript(@item.errors.full_messages.join ', ').html_safe %>");
-  $("#flash_errors").show(300);
+  $("#flash_errors").html("<%= escape_javascript(@item.errors.full_messages.join ', ').html_safe %>")
+                    .show(300);
 <% else -%>
   $("#flash_errors").hide(300);
-  $("#flash_notice").html("<%= escape_javascript(flash[:notice]) %>");
-  $("#flash_notice").show(300);
-  $("#items").html("<%= escape_javascript(render 'form') %>");
+  $("#flash_notice").html("<%= escape_javascript(flash[:notice]) %>").show(300);
+  $("#form").hide(300);
+  $("#new-button").show();
   $("#items").html("<%= escape_javascript(render 'items') %>");
 <% end -%>

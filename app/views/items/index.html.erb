@@ -3,4 +3,5 @@
 <div id="flash_errors" class="alert alert-dismissible alert-danger"></div>
 
 <div id="form"><%= render 'form' %></div>
+<%= link_to 'New Item', new_item_path, class: 'btn btn-default', id: "new-button", remote: true %>
 <div id="items"><%= render 'items' %></div>

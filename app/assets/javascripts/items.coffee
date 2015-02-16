@@ -4,3 +4,4 @@
 $ ->
   $("#flash_notice").hide()
   $("#flash_errors").hide()
+  $("form").hide()
